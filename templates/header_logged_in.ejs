@@ -1,0 +1,33 @@
+<header>
+    <div class="inside">
+        <nav id="mainMenu">
+            <ul>
+                <%
+                for(var i = 0; i < menuitems.length; i++) {
+                    var item = menuitems[i];
+                        if (item.id == active) {
+                %>
+                <li><span class="active" lang="en"><%= item.title %></span></li>
+                <%
+                } else {
+                %>
+                <li><a href="/<%= item.location %>" lang="en"><%= item.title %></a></li>
+                <% }
+                        if (!(menuitems.length - 1 == i)) {
+                %>
+                <li class="separator">|</li>
+                <%
+                }
+                } %>
+            </ul>
+        </nav>
+        <nav id="sekMenu">
+            <ul>
+                <li><a lang="en" id="userProfile"><%= username %></a></li>
+                <li class="separator">|</li>
+                <li><a href="#" lang="en" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+        <img src="/static/plugins/ep_user_pads/static/theme/<%=theme%>/logo.png" alt="Etherpad" id="logo">
+    </div>
+</header>

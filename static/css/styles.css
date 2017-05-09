@@ -1,0 +1,644 @@
+/* Copyright 2014 Alexander Oberegger
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. */
+.loginArea {
+    width: 40%;
+    float: left;
+    padding: 1% 5% 2% 5%;
+}
+.headerfooter {
+    background-color: #ffc049;
+}
+.roundedBorder {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.headlineImage {
+    float: left;
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+}
+.headlineGroupImage {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+.link {
+    text-decoration: none;
+    color: #155f71;
+}
+.link-main a:link,
+.link-main a:visited {
+    text-decoration: none;
+    color: #155f71;
+}
+.link-main a:hover,
+.link-main a:active {
+    color: #3C828E;
+}
+.smallFont {
+    font-size: 7pt;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #155f71;
+    font: 10pt Futura, 'Open Sans', sans-serif;
+    height: 100%;
+}
+#wrapper {
+    min-width: 960px;
+    position: relative;
+    min-height: 100%;
+}
+.inside {
+    width: 960px;
+    margin: 0 auto;
+}
+header {
+    background-color: #ffc049;
+    text-align: right;
+}
+header #logo {
+    text-align: right;
+    height: 30px;
+    margin: 13px;
+}
+footer {
+    background-color: #ffc049;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    padding-bottom: 11px;
+    padding-top: 28px;
+    margin: 0;
+    line-height: 17px;
+}
+#title {
+    padding: 18px;
+    background-color: #ffd88f;
+    text-align: center;
+}
+#title span {
+    display: block;
+}
+#title #mainTitle {
+    font-size: 40pt;
+}
+#title #altTitle {
+    font-size: 18pt;
+}
+#main {
+    padding-bottom: 56px;
+}
+#mainIllustration {
+    text-align: center;
+}
+#mainIllustration img {
+    height: 250px;
+}
+.leftArea {
+    width: 40%;
+    float: left;
+    padding: 1% 5% 2% 5%;
+}
+.leftArea .buttontext {
+    font-size: 11pt;
+}
+.rightArea {
+    width: 40%;
+    float: left;
+    padding: 1% 5% 2% 5%;
+    text-align: left;
+}
+.rightArea form {
+    vertical-align: middle;
+}
+.right {
+    text-align: right;
+}
+h1 {
+    font-size: 15pt;
+    font-weight: normal;
+    margin: 0;
+    line-height: 27px;
+}
+h3 {
+    font-size: 11pt;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+}
+h4 {
+    font-size: 9pt;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+}
+button {
+    -moz-box-shadow: inset 0 1px 0 0 #fceaca;
+    -webkit-box-shadow: inset 0 1px 0 0 #fceaca;
+    box-shadow: inset 0 1px 0 0 #fceaca;
+    background-color: #ffce73;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #ffc04a;
+    display: inline-block;
+    color: #155f71;
+    font-size: 11pt;
+    padding: 3px 15px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #c7dee3;
+    margin: 4px 2px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+button:hover {
+    background-color: #ffc35c;
+}
+button:active {
+    position: relative;
+    top: 1px;
+}
+input[type=text],
+input[type=password] {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 2px solid #155f71;
+    padding: 5px;
+    width: 200px;
+}
+input[placeholder] {
+    color: #155f71;
+}
+.register {
+    margin-bottom: 2px;
+}
+.registerInfo {
+    vertical-align: bottom;
+    font-size: 7pt;
+}
+#overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    -ms-filter: "Alpha(Opacity=50)";
+    /* IE 8 */
+    filter: alpha(opacity=50);
+    /* IE5-7 */
+    -moz-opacity: 0.50;
+    /* Mozilla */
+    opacity: 0.50;
+}
+#lightBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -275px;
+    z-index: 1000;
+    width: 550px;
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 9px solid #ffc049;
+}
+#lightBox .overlayLoginArea {
+    float: left;
+    width: 50%;
+}
+#lightBox #lightBoxHeader {
+    padding: 7px 7px;
+    height: 16px;
+    text-align: right;
+}
+#lightBox .close {
+    background-image: url(images/close-cyan-12.png);
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #lightBox .close {
+        background-image: url(images/close-cyan-12@2x.png);
+        background-size: auto auto;
+    }
+}
+#lightBox .content {
+    margin: 20px 30px 25px 30px;
+}
+#lightBox .headline {
+    margin-left: 30px;
+}
+#lightBox label {
+    display: block;
+    font-size: 11pt;
+    margin-bottom: 3px;
+}
+#lightBox #formEtherpadLogin input[type=text],
+#lightBox #formEtherpadLogin input[type=password],
+#lightBox #formEtherpadRegister input[type=text],
+#lightBox #formEtherpadRegister input[type=password] {
+    display: block;
+    width: 250px;
+}
+#mainMenu {
+    width: 592px;
+    float: left;
+    font-size: 13pt;
+    margin-left: 8px;
+}
+#sekMenu {
+    width: 250px;
+    float: left;
+    font-size: 9pt;
+}
+#mainMenu ul,
+#sekMenu ul {
+    margin: 0;
+    padding-top: 15px;
+}
+#sekMenu ul {
+    margin: 0;
+    padding-top: 5px;
+}
+#mainMenu li,
+#sekMenu li {
+    list-style-type: none;
+    float: left;
+    margin: 0;
+}
+#mainMenu li a:link,
+#sekMenu li a:link,
+#mainMenu li a:visited,
+#sekMenu li a:visited {
+    text-decoration: none;
+    color: #155f71;
+}
+#mainMenu li a:hover,
+#sekMenu li a:hover,
+#mainMenu li a:active,
+#sekMenu li a:active {
+    color: white;
+}
+#mainMenu li .active,
+#sekMenu li .active {
+    color: white;
+}
+.separator {
+    padding: 0 4%;
+}
+#loggedInTitle {
+    font-size: 28pt;
+    display: block;
+    padding: 3% 5% 0;
+}
+#loggedInSubtitle {
+    padding: 0.3% 5% 3%;
+    display: block;
+    width: 330px;
+}
+#quickGroupMenu {
+    margin: 8% 0;
+}
+#quickGroupMenu ul {
+    padding-left: 24px;
+    margin: 6px 0;
+    list-style-image: url(images/users-cyan-16.png);
+}
+#quickGroupMenu a:link,
+#quickGroupMenu a:visited {
+    text-decoration: none;
+    color: #155f71;
+}
+#quickGroupMenu a:hover,
+#quickGroupMenu a:active {
+    color: #3C828E;
+}
+.padIllustration {
+    margin: 10% auto;
+    display: block;
+}
+.inputBlock {
+    margin: 8% 0 18%;
+}
+.longButton {
+    margin: 4px 0 0 0;
+}
+button.longButton::-moz-focus-inner {
+    padding: 0 3px;
+}
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 3px 5px;
+}
+td a:link,
+td a:visited {
+    text-decoration: none;
+    color: #155f71;
+}
+td a:hover,
+td a:active {
+    color: #3C828E;
+}
+.odd {
+    background-color: #EDCF9F;
+}
+.first {
+    width: 300px;
+    padding-left: 15px;
+    font-size: 9pt;
+}
+.last {
+    padding-right: 15px;
+}
+.role,
+.editDate {
+    width: 150px;
+    font-size: 7pt;
+    text-align: center;
+}
+.delete,
+.options {
+    width: 11px;
+    height: 11px;
+    cursor: pointer;
+}
+.groupDetails,
+#userProfile {
+    cursor: pointer;
+}
+.lock,
+.unlock {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+}
+#search,
+#searchU {
+    width: 125px;
+    border: 1px solid #155f71;
+    padding: 1px 3px;
+    margin-bottom: 6px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 3px;
+}
+.navigationInfo {
+    text-align: center;
+    font-size: 10pt;
+    padding-top: 8px;
+}
+footer a:link,
+footer a:visited {
+    text-decoration: none;
+    color: #155f71;
+}
+footer a:hover,
+footer a:active {
+    color: #3C828E;
+}
+.inviteInfo {
+    font-size: 10pt;
+    display: block;
+    margin-bottom: 30px;
+}
+.deleteInfo {
+    font-size: 10pt;
+    display: block;
+    margin-bottom: 5px;
+}
+.marginRight {
+    margin-right: 15px;
+}
+.marginBottom {
+    margin-bottom: 20px;
+}
+.marginTop {
+    margin-top: 10px;
+}
+.smallMarginBottom {
+    margin-bottom: 5px;
+}
+.longInput {
+    width: 330px !important;
+}
+.red {
+    color: #b82349;
+}
+.grey {
+    background-color: #ccc;
+}
+#overlayOptions {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -87px;
+    width: 110px;
+    border: 2px solid #155f71;
+    background-color: white;
+}
+#overlayOptions ul {
+    margin: 0;
+    padding: 6% 4% 4% 4%;
+}
+#overlayOptions ul li {
+    list-style-type: none;
+    text-align: right;
+    font-size: 7pt;
+}
+#overlayOptions ul li a:link,
+#overlayOptions ul li a:visited {
+    text-decoration: none;
+    color: #155f71;
+}
+#overlayOptions ul li a:hover,
+#overlayOptions ul li a:active {
+    color: #3C828E;
+}
+.smallIcon {
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+}
+.arrow {
+    position: absolute;
+    top: -10px;
+    left: 82px;
+}
+#groupNav {
+    background-color: #ffd88f;
+    padding: 2px 0;
+}
+#groupNav a:link,
+#groupNav a:visited {
+    text-decoration: none;
+    color: #155f71;
+}
+#groupNav a:hover,
+#groupNav a:active {
+    color: #3C828E;
+}
+#groupNav ul {
+    margin: 0;
+    padding: 0 0 0 5%;
+}
+#groupNav ul li {
+    list-style-type: none;
+    float: left;
+    font-size: 8pt;
+}
+.smallSeparator {
+    padding: 0 5px;
+}
+.headlineGroup {
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+.headlineGroup h1 {
+    font-size: 28pt;
+    line-height: normal;
+    display: inline;
+}
+.clearMargin {
+    margin: 0;
+}
+.userInfo {
+    font-size: 9pt;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.errorLeft {
+    padding: 1px 30px;
+    text-align: center;
+    position: absolute;
+    margin-top: -27px;
+    margin-left: -59px;
+    background-color: #b82349;
+    font-size: 7pt;
+    color: white;
+}
+.errorRight {
+    padding: 1px 30px;
+    background-color: #b82349;
+    margin-left: 269px;
+    margin-top: -27px;
+    position: absolute;
+    text-align: center;
+    font-size: 7pt;
+    color: white;
+}
+.errorRightLong {
+    padding: 1px 30px;
+    background-color: #b82349;
+    margin-top: -27px;
+    position: absolute;
+    text-align: center;
+    font-size: 7pt;
+    color: white;
+    margin-left: 349px;
+}
+.errorUp {
+    padding: 1px 30px;
+    background-color: #b82349;
+    position: absolute;
+    text-align: center;
+    font-size: 7pt;
+    color: white;
+    margin-top: 1px;
+}
+.arrowleft {
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+    border: 5px solid transparent;
+    border-left-color: #B82349;
+    position: absolute;
+    width: 0;
+    margin-left: 116px;
+    margin-top: 2px;
+}
+.arrowRight {
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+    border: 5px solid transparent;
+    border-right-color: #B82349;
+    position: absolute;
+    width: 0;
+    margin-left: -40px;
+    margin-top: 1px;
+}
+.arrowUp {
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+    border: 5px solid transparent;
+    border-bottom-color: #B82349;
+    position: absolute;
+    width: 0;
+    margin-left: -20px;
+    margin-top: -11px;
+}
+.white {
+    color: white;
+    font-size: 7pt;
+}
+img {
+    border: none;
+}
+#minimize,
+#maximize {
+    background-color: #155f71;
+    position: absolute;
+    left: 54%;
+    top: 0;
+    cursor: pointer;
+}
+#minimize #minMaxArrow,
+#maximize #minMaxArrow {
+    padding: 2px 6px;
+}
+#iframePad {
+    border: 2px solid #d4d4d4;
+}
+.padClick {
+    cursor: pointer !important;
+}
+#previousPage,
+#nextPage {
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.pointer {
+    cursor: pointer;
+}

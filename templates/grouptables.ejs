@@ -1,0 +1,66 @@
+<!-- Copyright 2014 Alexander Oberegger
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<% if (groups.length > 0) { %>
+<% for(var i = 1; i <= groups.length; i++){ %>
+<% if (i % 2 == 1) { %>
+<tr class="odd" id="Gruppe<%= groups[i - 1].id %>" data-role="<%= groups[i - 1]['role_id'] %>">
+    <td class="first"><a href="group.html/<%= groups[i - 1].id %>"><%= groups[i - 1].name %></a></td>
+    <td class="role">
+        <% if (groups[i - 1]['role_id'] == 1) { %>
+        Owner
+        <% } else { %>
+        User
+        <% } %>
+    </td>
+    <td title="User Management">
+        <img name="<%= groups[i - 1].id %>"
+             src="/static/plugins/ep_user_pads/static/images/users-gold-16.png"
+             class="groupDetails"></td>
+    <% if (groups[i - 1]['role_id'] == 1) { %>
+    <td title="Delete Group" class="last">
+        <img id="<%= groups[i - 1].id %>" title="<%= groups[i - 1].name %>"
+             src="/static/plugins/ep_user_pads/static/images/close-red-16.png"
+             class="delete"></td>
+    <% } else { %>
+    <td class="last"></td>
+    <% } %>
+</tr>
+<% } else { %>
+<tr id="Gruppe<%= groups[i - 1].id %>" data-role="<%= groups[i - 1]['role_id'] %>">
+    <td class="first"><a href="group.html/<%= groups[i - 1].id %>"><%= groups[i - 1].name %></a></td>
+    <td class="role">
+        <% if (groups[i - 1]['role_id'] == 1) { %>
+        Owner
+        <% } else { %>
+        User
+        <% } %>
+    </td>
+    <td title="User Management">
+        <img name="<%= groups[i - 1].id %>"
+             src="/static/plugins/ep_user_pads/static/images/users-gold-16.png"
+             class="groupDetails"></td>
+    <% if (groups[i - 1]['role_id'] == 1) { %>
+    <td title="Delete Group" class="last"><img id="<%= groups[i - 1].id %>" title="<%= groups[i - 1].name %>"
+                                               src="/static/plugins/ep_user_pads/static/images/close-red-16.png"
+                                               class="delete"></td>
+    <% } else { %>
+    <td class="last"></td>
+    <% } %>
+</tr>
+<% } %>
+<% } %>
+<% } else { %>
+<a style="color:red">No Groups found.</a>
+<% } %>	

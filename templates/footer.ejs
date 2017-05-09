@@ -1,0 +1,57 @@
+<footer>
+    <div class="inside">
+        <p lang="en">
+            <a href="/static/plugins/ep_user_pads/static/theme/<%= theme %>/imprint.html" target="_blank">
+                Imprint
+            </a>
+            <span class="separator">|</span>
+            <a href="/static/plugins/ep_user_pads/static/theme/<%= theme %>/terms.html" target="_blank">
+                Terms of Usage
+            </a>
+        </p>
+    </div>
+</footer>
+
+<script src="/static/plugins/ep_user_pads/static/js/client/kiwi.js" type="text/javascript"></script>
+<script src="/static/plugins/ep_user_pads/static/js/client/jquery.js" type="text/javascript"></script>
+<script src="/static/plugins/ep_user_pads/static/js/client/notify.min.js" type="text/javascript"></script>
+<script src="/static/plugins/ep_user_pads/static/js/client/etherpad.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var notification = <%- notification%>; // direct injection of object
+    var options = {
+        // whether to hide the notification on click
+        clickToHide: true,
+        // whether to auto-hide the notification
+        autoHide: true,
+        // if autoHide, hide after milliseconds
+        autoHideDelay: 6000,
+        // show the arrow pointing at the element
+        arrowShow: true,
+        // arrow size in pixels
+        arrowSize: 5,
+        // default positions
+        elementPosition: 'bottom left',
+        globalPosition: 'top center',
+        // default style
+        style: 'bootstrap',
+        // default class (string or [string])
+        // error, info, warn, ...
+        //className: 'error',
+        className: notification.type,
+        // show animation
+        showAnimation: 'slideDown',
+        // show animation duration
+        showDuration: 400,
+        // hide animation
+        hideAnimation: 'slideUp',
+        // hide animation duration
+        hideDuration: 200,
+        // padding between element and notification
+        gap: 2
+    };
+    
+
+    if (notification.enabled) {
+        $.notify(notification.text, options);
+    }
+</script> 

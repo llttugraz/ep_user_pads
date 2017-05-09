@@ -1,0 +1,56 @@
+<!-- Copyright 2014 Alexander Oberegger
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title lang="en">Etherpad</title>
+    <link href="/static/plugins/ep_user_pads/static/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+    <header>
+
+    </header>
+    <div id="main">
+        <div id="title">
+            <span id="mainTitle" lang="en">Etherpad</span> <span id="altTitle"
+                                                                 lang="en"></span>
+        </div>
+        <div class="inside">
+            <div id="mainIllustration">
+                <img
+                        src="/static/plugins/ep_user_pads/static/images/pad-illustration-01.png"
+                        alt="">
+            </div>
+            <div>
+                <h1 lang="en" class="middleArea"><%= msg %></h1>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <%- footer%>
+</div>
+<script src="/static/plugins/ep_user_pads/static/js/client/login.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            window.location = "/index.html"
+        }, 3000);
+    });
+</script>
+</body>
+</html>

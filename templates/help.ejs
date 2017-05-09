@@ -1,0 +1,61 @@
+<!-- Copyright 2014 Alexander Oberegger
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title lang="en">Etherpad</title>
+    <link type="text/css" href="/static/plugins/ep_user_pads/static/css/styles.css" rel="stylesheet"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+    <%- header %>
+    <div id="main">
+        <div class="inside">
+            <div class="leftArea">
+                <div class="inputBlock">
+                    <div class="headline">
+                        <h1 lang="en">How to create a private pad?</h1>
+                    </div>
+                    <ol>
+                        <li>Open &quot;<a href="groups.html">My Groups</a>&quot;</li>
+                        <li>Under &quot;Create Private Group&quot; enter a groupname (this name must not exist on the
+                            sytem yet) and click on the button &quot;Create&quot;. The new group should be listed under
+                            &quot;Open Private Groups&quot; now.
+                        </li>
+                        <li>If you want to add/invite users, click on the users symbol
+                            <img src="/static/plugins/ep_user_pads/static/images/users-gold-16.png"/>
+                        </li>
+                        <li>Click on the group name to switch to the group page.</li>
+                        <li>Now enter a pad name under &quot;Create Private Group Pad&quot; and click on on the button
+                            &quot;Create&quot;. The new pad should be listed under &quot;Manage Private Group Pads&quot;
+                            now.
+                        </li>
+                        <li>Click on the pad name to switch to the pad page.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="rightArea">
+                &nbsp;
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <%- footer %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- Copyright 2014 Alexander Oberegger
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<% if (noresults) {%>
+<h4 style="color:red" lang="en">No Pads found.</h4>
+<%} else if (pads.length > 0) { %>
+    <% for(var i = 1; i <= pads.length; i++){%>
+        <%if (i%2 == 1) {%>
+            <tr class="odd" id="Pad<%=i%>">
+                <td class="first"><a class="padClick" href="<%=groupid%>" rel="<%=pads[i-1].name%>"><%= pads[i-1].name%></a></td>
+                <td class="editDate"><%=pads[i-1].lastedit%></td>
+                <td title="Delete Pad" class="last"><img title="<%=pads[i-1].name%>" id = "<%= groupid %>" src="/static/plugins/ep_user_pads/static/images/close-red-16.png" class="delete"></td>
+            </tr>
+        <%} else {%>
+            <tr id="Pad<%=i%>">
+                <td class="first"><a class="padClick" href="<%=groupid%>" rel="<%=pads[i-1].name%>"><%= pads[i-1].name%></a></td>
+                <td class="editDate"><%=pads[i-1].lastedit%></td>
+                <td title="Delete Pad" class="last"><img title="<%=pads[i-1].name%>" id = "<%= groupid %>" src="/static/plugins/ep_user_pads/static/images/close-red-16.png" class="delete"></td>
+            </tr>
+        <%}%>
+    <% } %>	
+<% } %>

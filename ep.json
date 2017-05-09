@@ -1,0 +1,18 @@
+{
+    "parts": [
+        {
+            "name": "ep_user_pads",
+            "hooks": {
+                "expressCreateServer": "ep_user_pads/hooks.js:expressCreateServer",
+                "eejsBlock_adminMenu": "ep_user_pads/hooks.js",
+                "socketio": "ep_user_pads/hooks",
+                "eejsBlock_styles": "ep_user_pads/hooks",
+                "eejsBlock_useradminmenu": "ep_user_pads/hooks",
+                "eejsBlock_indexWrapper": "ep_user_pads/hooks"
+            },
+            "client_hooks": {
+                "documentReady": "ep_user_pads/static/js/admin/user_pad_admin.js:documentReady"
+            }
+        }
+    ]
+}

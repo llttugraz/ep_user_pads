@@ -1,0 +1,82 @@
+/* Copyright 2014 Alexander Oberegger
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. */
+
+div.leftwrapper {
+  background: none repeat scroll 0px 0px #FFFFFF;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+  padding: 15px;
+  max-width: 150px;
+
+  height:100%;
+  float: left;
+  border-right: 1px solid #ccc;
+  max-height: 70px;
+}
+
+div.leftwrapper li {
+  list-style: none;
+  margin-left: 3px;
+  line-height: 3;
+  border-top: 1px solid #ccc;
+}
+
+div.leftwrapper ul {
+    margin: 0;
+    padding: 0
+}
+
+
+div.rightwrapper {
+	float: left;
+	min-width: 85%;
+}
+
+.innerwrapper {
+    display: inline-block !important;
+}
+
+.sort {
+  cursor: pointer;
+}
+
+.sort:after {
+  content: '▲▼'
+}
+.sort.up:after {
+  content:'▲'
+}
+.sort.down:after {
+  content:'▼'
+}
+
+input[type="password"] {
+  border-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 10px;
+  *padding: 0;
+ /* IE7 hack */
+  width: 100%;
+  outline: none;
+  border: 1px solid #ddd;
+  margin: 0 0 5px 0;
+  max-width: 500px;
+}
+
+
+.dbTable {
+    width: 300px;
+    margin: 20px;
+}

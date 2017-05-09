@@ -1,0 +1,103 @@
+<!-- Copyright 2014 Alexander Oberegger, Igor Skoric
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title lang="en">Etherpad</title>
+    <link type="text/css" href="/static/plugins/ep_user_pads/static/css/styles.css" rel="stylesheet"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+    <%- header %>
+
+    <div id="main">
+        <div class="inside">
+            <span id="loggedInTitle" lang="en">University Pad</span>
+            <span id="loggedInSubtitle" lang="en"><br>Work with Pads alone or in groups, public or private.<br>
+                To create a private Pad you first have to create a private Group.</span>
+
+            <div class="leftArea">
+                <div class="headline">
+                    <img src="/static/plugins/ep_user_pads/static/images/pad-32.png" class="headlineImage"
+                         alt="Register">
+
+                    <h1 lang="en">Public Pad</h1>
+                </div>
+                <h4 lang="en">Open a Public Pad by Name</h4>
+
+                <form>
+                    <input type="text" placeholder="Pad-Name" id="padName">
+                    <button type="submit" lang="en" id="openPublicPad">Open</button>
+                </form>
+            </div>
+            <div class="rightArea">
+                <div class="headline">
+                    <img src="/static/plugins/ep_user_pads/static/images/users-cyan-32.png"
+                         class="headlineImage" alt="Register">
+
+                    <h1 lang="en">Private Groups</h1>
+                </div>
+                <h4 lang="en">Create new Groups and open your recently used Groups</h4>
+
+                <form id="createPrivateGroupForm">
+                    <input type="text" placeholder="Group-Name" id="groupName" autocomplete=off>
+                    <button type="submit" lang="en" id="createPrivateGroup">Create</button>
+                </form>
+                <div id="quickGroupMenu">
+                    <h3 lang="en">Open my recently used Groups</h3>
+                    <% if (groups.length >= 6) { %>
+                    <ul>
+                        <% for(var i = 0; i < 6; i++){ %>
+                        <li><a href="group.html/<%= groups[i].id %>" lang="en"><%= groups[i].name %></a></li>
+                        <% } %>
+                    </ul>
+                    <% } else if (groups.length < 6 && groups.length > 0) { %>
+                    <ul>
+                        <% for(var j = 0; j < groups.length; j++){ %>
+                        <li><a href="group.html/<%= groups[j].id %>" lang="en"><%= groups[j].name %></a></li>
+                        <% } %>
+                    </ul>
+                    <% } else { %>
+                    <h4 class="red" lang="en">You are in no Group at the moment.</h4>
+                    <% } %>
+
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <%- footer %>
+    
+    <%if (piwik.enabled) {%>
+    <!-- Piwik -->
+    <script type="text/javascript" src="<%= piwik.baseUrl + 'piwik.js'%>"></script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker("<%= piwik.baseUrl + 'piwik.php'%>", <%= piwik.site_id %>);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch (err) {
+            console.error(err)
+        }
+    </script>
+    <noscript><p><img src="<%= piwik.baseUrl %>/piwik.php?idsite=30" style="border:0" alt=""/></p></noscript>
+    <!-- End Piwik Tracking Code -->
+    <% } %>
+</div>
+
+</body>
+</html>

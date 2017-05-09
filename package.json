@@ -1,0 +1,45 @@
+{
+  "name": "ep_user_pads",
+  "description": "With the user_pads plugin it's possible to create password saved pads in groups. It's a User-Management System. It allows User to register, authenticate, to create groups and to create pads in groups.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Alexander Oberegger"
+  },
+  "dependencies": {
+    "formidable": "1.0.14",
+    "connect": "2.4.x",
+    "emailjs": "0.3.13",
+    "crypto": "0.0.3",
+    "nodemailer": "0.5.2",
+    "mysql": "2.0.0-alpha9",
+    "express": "3.2.6",
+    "highland": "~1.25.1"
+  },
+  "readmeFilename": "README.md",
+  "main": "hooks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/llttugraz/ep_user_pads.git"
+  },
+  "keywords": [
+    "etherpad-lite",
+    "user",
+    "user-management",
+    "group pads",
+    "group"
+  ],
+  "license": "Apache-2.0",
+  "_id": "ep_user_pads@0.1.2",
+  "_from": "ep_user_pads",
+  "dist": {
+    "shasum": "6f413db1264bec835817be580f3a83acbc667d9f"
+  },
+  "bugs": {
+    "url": "https://github.com/llttugraz/ep_user_pads/issues"
+  },
+  "readme": "This is a user-management system for etherpad-lite\r\n\r\nThis is the admin tool for the ep_user_pads plugin for etherpad-lite. Please look at installation.pdf for further installation informations. \r\n\r\nThe frontend plugin for the user-management system can be found at\r\n\r\nhttps://github.com/llttugraz/ep_user_pads/\r\n\r\nINSTALL\r\n=======\r\n\r\n1) npm install ep_user_pads\r\n2) You can visit http://youretherpad//admin/plugins. Search for user_pad - click on install and the plugin works.\r\n(see also https://github.com/Pita/etherpad-lite/wiki/Creating-a-plugin   [Step 5 Install plugin])\r\n\r\nPlease look at the installation.pdf on github for further installation information.\r\n\r\n\r\n",
+  "homepage": "https://github.com/llttugraz/ep_user_pads"
+}
